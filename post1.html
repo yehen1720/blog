@@ -1,7 +1,140 @@
-<h1>Github</h1>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Github | りょうくんのメモ</title>
+  <style>
+    :root {
+      --bg: #f6efe6;
+      --paper: rgba(255, 252, 247, 0.9);
+      --paper-strong: #fffdf9;
+      --text: #2f241f;
+      --muted: #7a675c;
+      --line: rgba(94, 63, 47, 0.14);
+      --accent: #b85c38;
+      --accent-soft: #f0d3bf;
+      --shadow: 0 18px 40px rgba(77, 48, 34, 0.12);
+    }
 
-<p>GithubとVS Codeの繋がり、CODEXの連携、このあたりが理解できて嬉しい。</p>
-<p>何も分からないところからここまでこれて、生成AIの発展のメリットを活用できているのは良いことだと思う</p>
-<p>自分がかかわっていないと不安になるから、なるべくメリットを享受していきたい</p>
+    * {
+      box-sizing: border-box;
+    }
 
-<a href="index.html">戻る</a>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Yu Gothic", "Hiragino Sans", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(255, 255, 255, 0.7), transparent 30%),
+        linear-gradient(180deg, #f9f3ec 0%, var(--bg) 55%, #efe2d4 100%);
+    }
+
+    .page {
+      width: min(860px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 42px 0 64px;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 18px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    .back-link:hover {
+      color: var(--accent);
+    }
+
+    .article {
+      padding: 36px;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background: var(--paper);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(8px);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+    }
+
+    h1 {
+      margin: 18px 0 12px;
+      font-size: clamp(2rem, 5vw, 3.6rem);
+      line-height: 1.15;
+    }
+
+    .lead {
+      margin: 0 0 28px;
+      color: var(--muted);
+      line-height: 1.9;
+      font-size: 1rem;
+    }
+
+    .content {
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+    }
+
+    .content p {
+      margin: 0 0 18px;
+      line-height: 2;
+      font-size: 1.05rem;
+    }
+
+    .footer-link {
+      display: inline-block;
+      margin-top: 10px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .footer-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        width: min(100% - 20px, 860px);
+        padding: 20px 0 40px;
+      }
+
+      .article {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <a class="back-link" href="index.html">← 記事一覧へ戻る</a>
+
+    <article class="article">
+      <span class="eyebrow">MEMO 01</span>
+      <h1>Github</h1>
+      <p class="lead">開発環境どうしのつながりが見えてきて、少しずつ「自分でも触れる」という感覚が出てきたときのメモです。</p>
+
+      <div class="content">
+        <p>GithubとVS Codeの繋がり、CODEXの連携、このあたりが理解できて嬉しい。</p>
+        <p>何も分からないところからここまでこれて、生成AIの発展のメリットを活用できているのは良いことだと思う</p>
+        <p>自分がかかわっていないと不安になるから、なるべくメリットを享受していきたい</p>
+      </div>
+
+      <a class="footer-link" href="index.html">トップページに戻る</a>
+    </article>
+  </main>
+</body>
+</html>
