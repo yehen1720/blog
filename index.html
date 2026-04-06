@@ -1,6 +1,170 @@
-<h1>りょうくんのメモ</h1>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>りょうくんのメモ</title>
+  <style>
+    :root {
+      --bg: #f6efe6;
+      --paper: rgba(255, 252, 247, 0.88);
+      --paper-strong: #fffdf9;
+      --text: #2f241f;
+      --muted: #7a675c;
+      --line: rgba(94, 63, 47, 0.14);
+      --accent: #b85c38;
+      --accent-soft: #f0d3bf;
+      --shadow: 0 18px 40px rgba(77, 48, 34, 0.12);
+    }
 
-<ul>
-  <li><a href="post1.html">モンティホール問題</a></li>
-  <li><a href="post2.html">今日考えたこと</a></li>
-</ul>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Yu Gothic", "Hiragino Sans", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(255, 255, 255, 0.7), transparent 30%),
+        linear-gradient(180deg, #f9f3ec 0%, var(--bg) 55%, #efe2d4 100%);
+    }
+
+    .page {
+      width: min(960px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 48px 0 64px;
+    }
+
+    .hero {
+      padding: 40px;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background: var(--paper);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(8px);
+    }
+
+    .eyebrow {
+      margin: 0 0 14px;
+      font-size: 0.8rem;
+      letter-spacing: 0.18em;
+      color: var(--accent);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      line-height: 1.1;
+    }
+
+    .lead {
+      max-width: 42rem;
+      margin: 16px 0 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.9;
+    }
+
+    .section-title {
+      margin: 40px 0 18px;
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+
+    .posts {
+      display: grid;
+      gap: 18px;
+    }
+
+    .post-card {
+      display: block;
+      padding: 24px 26px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: var(--paper-strong);
+      color: inherit;
+      text-decoration: none;
+      box-shadow: 0 10px 24px rgba(77, 48, 34, 0.08);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+
+    .post-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(184, 92, 56, 0.28);
+      box-shadow: 0 18px 32px rgba(77, 48, 34, 0.12);
+    }
+
+    .post-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+      margin-bottom: 14px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+
+    .post-card h2 {
+      margin: 0;
+      font-size: 1.35rem;
+    }
+
+    .post-card p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        width: min(100% - 20px, 960px);
+        padding: 20px 0 40px;
+      }
+
+      .hero,
+      .post-card {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <p class="eyebrow">MY BLOG</p>
+      <h1>りょうくんのメモ</h1>
+      <p class="lead">学んだこと、考えたこと、ふと思いついたことを少しずつ残していくためのブログです。気軽に読み返せるように、記事をシンプルにまとめています。</p>
+    </section>
+
+    <section>
+      <h2 class="section-title">ARTICLES</h2>
+      <div class="posts">
+        <a class="post-card" href="post1.html">
+          <span class="post-number">01</span>
+          <h2>Github</h2>
+          <p>Github と VS Code、そして Codex のつながりを触ってみて感じたことを書いた記事です。</p>
+        </a>
+
+        <a class="post-card" href="post2.html">
+          <span class="post-number">02</span>
+          <h2>とりあえずタイトル</h2>
+          <p>Markdown の見出しや箇条書きを試しながら、記事の形を少しずつ整えてみたメモです。</p>
+        </a>
+
+        <a class="post-card" href="post3.html">
+          <span class="post-number">03</span>
+          <h2>３つ目の記事</h2>
+          <p>思いついたことを気軽に書き足していくための、ラフな下書きに近い記事です。</p>
+        </a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
