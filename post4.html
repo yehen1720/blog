@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>桜の木の下には | りょうくんのメモ</title>
+  <style>
+    :root {
+      --bg: #f6efe6;
+      --paper: rgba(255, 252, 247, 0.92);
+      --text: #2f241f;
+      --muted: #6f5f56;
+      --line: rgba(94, 63, 47, 0.14);
+      --accent: #b85c38;
+      --accent-soft: #f0d3bf;
+      --shadow: 0 18px 40px rgba(77, 48, 34, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Yu Gothic", "Hiragino Sans", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(255, 255, 255, 0.72), transparent 30%),
+        linear-gradient(180deg, #f9f3ec 0%, var(--bg) 55%, #efe2d4 100%);
+    }
+
+    .page {
+      width: min(820px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 40px 0 64px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      padding: 0 4px;
+    }
+
+    .home-link,
+    .article-type {
+      color: var(--muted);
+      font-size: 0.92rem;
+      text-decoration: none;
+    }
+
+    .home-link:hover {
+      color: var(--accent);
+    }
+
+    .article {
+      padding: 36px;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background: var(--paper);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(8px);
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--accent);
+      font-size: 0.82rem;
+      letter-spacing: 0.16em;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1.15;
+    }
+
+    .lead {
+      margin: 18px 0 0;
+      color: var(--muted);
+      line-height: 1.9;
+      font-size: 1.04rem;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h2 {
+      margin: 40px 0 14px;
+      font-size: 1.28rem;
+      line-height: 1.4;
+    }
+
+    p {
+      margin: 14px 0;
+      line-height: 1.95;
+    }
+
+    ul {
+      margin: 14px 0 14px 1.2rem;
+      padding: 0;
+    }
+
+    li {
+      margin: 8px 0;
+      line-height: 1.85;
+    }
+
+    .flow {
+      display: block;
+      margin: 18px 0;
+      padding: 16px 18px;
+      border-left: 4px solid var(--accent);
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--accent-soft), rgba(255, 252, 247, 0.96));
+      color: #6d3824;
+      font-weight: 600;
+      line-height: 1.8;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 28px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        width: min(100% - 20px, 820px);
+        padding: 20px 0 40px;
+      }
+
+      .article {
+        padding: 22px;
+        border-radius: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="topbar">
+      <a class="home-link" href="index.html">← Home</a>
+      <span class="article-type">読書メモ</span>
+    </div>
+    <article class="article">
+      <p class="eyebrow">BOOK IMPRESSION</p>
+      <h1>桜の木の下には</h1>
+      <p class="lead">梶井基次郎の「桜の木の下には」を読んで、美しいものをそのまま受け止めきれないとき、人はどんな虚構を作るのかを考えたメモ。</p>
+
+      <p>「桜の木の下には死体が埋まっている」という表現を、最初は人間でも動物でも植物でもなんでもいいから、死体を肥料として桜が育っている、という意味だと思っていた。</p>
+      <p>ただ、梶井基次郎の同名の作品を読んで、面白い考え方だなと思った。小説では、桜のように美が極まったものを直接受け止めることができない語り手が、「桜の木の下の死体」とセットで受け止めることについて書かれている。</p>
+      <p>これは作者特有の感覚なのかと思ったけれど、あえて誇張しているだけで、同じ線上のもう少し手前のところでは、誰でも似たことを思うのではないかとも感じた。</p>
+      <p>たとえば、花は散るから美しいとか、若さはいつか失われるから輝くとか。そういう発想にも、美と死を結びつける感覚がすでにある。</p>
+
+      <h2>作品の流れ</h2>
+      <p>この小説の流れをざっくりまとめると、</p>
+      <ul>
+        <li>桜が異様に美しすぎる</li>
+        <li>その美しさが「信じられない」と感じられる</li>
+        <li>不安や憂鬱が生まれる</li>
+        <li>その理由を説明するために「屍体」という仮説が作られる</li>
+        <li>美と死が結びつく</li>
+        <li>その瞬間、心が落ち着き、桜を直視できるようになる</li>
+      </ul>
+      <div class="flow">強すぎる美を、死というフィルターを通して理解可能にしている。</div>
+
+      <p>でも実際に桜の木の下に死体が埋まっているわけではないだろうから、これは語り手が作り上げた虚構なんだと思う。</p>
+      <p>理解できないくらい綺麗な桜の綺麗さを受け取るには、同じくらい強いイメージで理解できるものを想像する必要がある。それが死体だった。美と醜という対極にあるものの方が、むしろバランスを取りやすいのだと思う。</p>
+
+      <h2>美しすぎるものへの反応</h2>
+      <p>理解できないほど性格が良く見える人に対して、裏で何かあるんじゃないかと思ってしまうことがある。そう思うことで、かえってバランスが取れて理解しやすくなる。</p>
+      <p>理解不能なものに対しては、理解可能にするための虚構を作り上げる。これはわりと自然にやっていることなんじゃないかと思う。</p>
+      <p>そして実際に、性格が良く見えた人が家に帰ったら自堕落で、配偶者に怒鳴り散らかしているところなんかを見たら、たぶんとても安心するんだろうね。</p>
+      <p>こんなに美しい花も、いつか散るから美しいのであって、持続的なものではないのか、と考えると、だから今とても美しく見えるのも許してあげようという気持ちになる。</p>
+      <p>逆に、これが永遠に美しく、散ることのない花だとしたら、何か大きな犠牲を裏で払っているに違いない、たとえば死体から栄養を取っているとか、そういうことだろうなと思う。</p>
+
+      <h2>自分の感覚に引きつけると</h2>
+      <p>街でとてつもなく魅力的な女性を見かけて、もう二度と会うことのない、一瞬のすれ違いしかできなかったときにも、似たことを思う。</p>
+      <p>このまま神秘的な魅力だけを受け取るのはつらいから、どうせ大したことがないはずだとか、化粧が上手いだけだとか、それでもごまかせない場合は、めちゃくちゃ頭の悪い人間だと思うようにするとか。</p>
+      <p>そういう人が身近にいた場合には、人間的な部分が出るところを観察してしまう。緊張しているところなんかを見ると安心する。なんだ、びびってしまうし、そんなことで心が動いてしまう人間なんだな、と。</p>
+      <p>自分は、そこまで見ないと安心できないところがある。</p>
+
+      <h2>最後に</h2>
+      <p>何か裏があるはずだと考えることを習慣化すると、それが信念のようになっていく。でもそれを客観視して、「また裏があるって信じようとしているな」と思うことは、いまのところまだできている。</p>
+
+      <a class="back-link" href="index.html">index.html に戻る</a>
+    </article>
+  </main>
+</body>
+</html>

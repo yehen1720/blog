@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>「翼」が表しているもの | りょうくんのメモ</title>
+  <style>
+    :root {
+      --bg: #f6efe6;
+      --paper: rgba(255, 252, 247, 0.92);
+      --text: #2f241f;
+      --muted: #6f5f56;
+      --line: rgba(94, 63, 47, 0.14);
+      --accent: #b85c38;
+      --accent-soft: #f0d3bf;
+      --shadow: 0 18px 40px rgba(77, 48, 34, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Yu Gothic", "Hiragino Sans", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(255, 255, 255, 0.72), transparent 30%),
+        linear-gradient(180deg, #f9f3ec 0%, var(--bg) 55%, #efe2d4 100%);
+    }
+
+    .page {
+      width: min(820px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 40px 0 64px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      padding: 0 4px;
+    }
+
+    .home-link,
+    .article-type {
+      color: var(--muted);
+      font-size: 0.92rem;
+      text-decoration: none;
+    }
+
+    .home-link:hover {
+      color: var(--accent);
+    }
+
+    .article {
+      padding: 36px;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background: var(--paper);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(8px);
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--accent);
+      font-size: 0.82rem;
+      letter-spacing: 0.16em;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1.15;
+    }
+
+    .lead {
+      margin: 18px 0 0;
+      color: var(--muted);
+      line-height: 1.9;
+      font-size: 1.04rem;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h2 {
+      margin: 40px 0 14px;
+      font-size: 1.28rem;
+      line-height: 1.4;
+    }
+
+    p {
+      margin: 14px 0;
+      line-height: 1.95;
+    }
+
+    ul {
+      margin: 14px 0 14px 1.2rem;
+      padding: 0;
+    }
+
+    li {
+      margin: 8px 0;
+      line-height: 1.85;
+    }
+
+    .flow {
+      display: block;
+      margin: 18px 0;
+      padding: 16px 18px;
+      border-left: 4px solid var(--accent);
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--accent-soft), rgba(255, 252, 247, 0.96));
+      color: #6d3824;
+      font-weight: 600;
+      line-height: 1.8;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 28px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        width: min(100% - 20px, 820px);
+        padding: 20px 0 40px;
+      }
+
+      .article {
+        padding: 22px;
+        border-radius: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="topbar">
+      <a class="home-link" href="index.html">← Home</a>
+      <span class="article-type">読書感想</span>
+    </div>
+    <article class="article">
+      <p class="eyebrow">BOOK IMPRESSION</p>
+      <h1>「翼」が表しているもの</h1>
+      <p class="lead">『翼』における翼は、単一の意味をもつ象徴ではない。物語の進行とともに、その性質を変化させていく、多層的な装置として描かれている。</p>
+
+      <h2>1. 若さにおける翼</h2>
+      <p>物語前半、杉男と葉子は互いの背中に翼を感じる。</p>
+      <p>ここで重要なのは、</p>
+      <ul>
+        <li>自分の背中ではなく</li>
+        <li>相手の背中に</li>
+      </ul>
+      <p>翼を見ているという点である。</p>
+      <p>この翼は、まだ現実の器官ではない。むしろ次のようなものを象徴している。</p>
+      <ul>
+        <li>相手を理想化するまなざし</li>
+        <li>地上の秩序（家族・戦争・社会）から一瞬浮上する感覚</li>
+        <li>若さの中にある超越の可能性</li>
+      </ul>
+      <p>この段階では、翼は「可能性」であり、「未来」であり、「美しいかもしれない飛翔」である。</p>
+
+      <h2>2. 葉子の死による変質</h2>
+      <p>葉子は空襲で死ぬ。</p>
+      <p>ここで起こるのは、翼の「実現」ではなく「凍結」である。</p>
+      <p>葉子は本当に遠くへ行ってしまう。しかし、その死は決して美しくはない。にもかかわらず、杉男の中では、葉子は翼を持つ存在として固定される。</p>
+      <p>死は理想を修正させない。理想は現実によって擦り減る前に、永遠化される。</p>
+      <p>この時点で翼は、次のようなものへと変わる。</p>
+      <ul>
+        <li>喪失の象徴</li>
+        <li>修正不可能な理想</li>
+        <li>過去に閉じ込められた可能性</li>
+      </ul>
+
+      <h2>3. 戦後の翼</h2>
+      <p>戦後、杉男は肩に「異様な重み」を感じる。</p>
+      <p>彼自身はそれを翼とは認識しない。しかし語りはそれを「怒れる不可視の翼」と名指す。ここが決定的に重要である。</p>
+      <p>翼は杉男の自覚的な信念ではない。彼が意図して信じている理想でもない。それは、次のように彼に貼りついている。</p>
+      <ul>
+        <li>自覚されないまま残る象徴</li>
+        <li>生き残ってしまった者の身体に残る過剰な意味</li>
+        <li>実現されなかった可能性の監視者</li>
+      </ul>
+      <p>翼は彼を罰しているというより、</p>
+      <ul>
+        <li>まだ飛べるのではないか</li>
+        <li>本来は飛ぶ存在だったのではないか</li>
+      </ul>
+      <p>と、無言で問い続ける存在として描かれている。</p>
+
+      <h2>4. 呪いの正体</h2>
+      <p>翼の呪いは、「飛べなかったこと」そのものよりも、「美しく飛べたかもしれない」という可能性が消えないことにある。</p>
+      <p>もし飛翔が最初から醜悪なものだったなら、それは呪いにはならない。しかし翼は、</p>
+      <ul>
+        <li>美しいかもしれない</li>
+        <li>超越かもしれない</li>
+        <li>別の生き方かもしれない</li>
+      </ul>
+      <p>という形で残り続ける。</p>
+      <p>実現した悲劇は終わる。だが、実現しなかった可能性は終わらない。その終わらなさが、肩の重みとなる。</p>
+
+      <h2>5. 結論</h2>
+      <p>『翼』は単なる戦争文学ではない。</p>
+      <p>それは、</p>
+      <ul>
+        <li>生き残ってしまった者の物語</li>
+        <li>理想を修正する機会を奪われた者の物語</li>
+        <li>未遂の可能性を抱えたまま地上を歩く者の寓話</li>
+      </ul>
+      <p>である。</p>
+      <p>翼は、</p>
+      <div class="flow">若さの超越 -&gt; 喪失による凍結 -&gt; 戦後の過剰な意味</div>
+      <p>という流れで変質し、最後には「脱ぐすべを誰も教えてくれないもの」として残る。</p>
+
+      <a class="back-link" href="index.html">index.html に戻る</a>
+    </article>
+  </main>
+</body>
+</html>
