@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>りょうくんのメモ</title>
+  <title>ひらめき | りょうくんのメモ</title>
   <style>
     :root {
       --bg: #f6efe6;
@@ -37,8 +37,20 @@
       padding: 48px 0 64px;
     }
 
+    .home-link {
+      display: inline-flex;
+      margin-bottom: 18px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
+
+    .home-link:hover {
+      color: var(--accent);
+    }
+
     .hero {
-      padding: 40px;
+      padding: 36px;
       border: 1px solid var(--line);
       border-radius: 28px;
       background: var(--paper);
@@ -77,31 +89,6 @@
     .posts {
       display: grid;
       gap: 18px;
-    }
-
-    .genres {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .genre-link {
-      display: inline-flex;
-      align-items: center;
-      padding: 10px 16px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: var(--paper-strong);
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 700;
-      box-shadow: 0 8px 18px rgba(77, 48, 34, 0.06);
-      transition: transform 0.18s ease, border-color 0.18s ease;
-    }
-
-    .genre-link:hover {
-      transform: translateY(-2px);
-      border-color: rgba(184, 92, 56, 0.3);
     }
 
     .post-card {
@@ -147,17 +134,6 @@
       line-height: 1.8;
     }
 
-    .post-genre {
-      display: inline-flex;
-      margin-top: 14px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      color: var(--accent);
-      font-size: 0.82rem;
-      font-weight: 700;
-    }
-
     @media (max-width: 640px) {
       .page {
         width: min(100% - 20px, 960px);
@@ -173,70 +149,27 @@
 </head>
 <body>
   <main class="page">
+    <a class="home-link" href="index.html">← Home</a>
+
     <section class="hero">
-      <p class="eyebrow">MY BLOG</p>
-      <h1>りょうくんのメモ</h1>
-      <p class="lead">学んだこと、考えたこと、ふと思いついたことを少しずつ残していくためのブログです。気軽に読み返せるように、記事をシンプルにまとめています。</p>
+      <p class="eyebrow">IDEA ARCHIVE</p>
+      <h1>ひらめき</h1>
+      <p class="lead">サービス案、仕組みの思いつき、あとで育てられそうな発想をまとめて見返すための場所です。</p>
     </section>
 
     <section>
-      <h2 class="section-title">GENRES</h2>
-      <div class="genres">
-        <a class="genre-link" href="hirameki.html">ひらめき</a>
-      </div>
-    </section>
-
-    <section>
-      <h2 class="section-title">ARTICLES</h2>
+      <h2 class="section-title">IDEAS</h2>
       <div class="posts">
-        <a class="post-card" href="post1.html">
-          <span class="post-number">01</span>
-          <h2>Github</h2>
-          <p>Github と VS Code、そして Codex のつながりを触ってみて感じたことを書いた記事です。</p>
-        </a>
-
-        <a class="post-card" href="post2.html">
-          <span class="post-number">02</span>
-          <h2>とりあえずタイトル</h2>
-          <p>Markdown の見出しや箇条書きを試しながら、記事の形を少しずつ整えてみたメモです。</p>
-        </a>
-
-        <a class="post-card" href="post3.html">
-          <span class="post-number">03</span>
-          <h2>３つ目の記事</h2>
-          <p>思いついたことを気軽に書き足していくための、ラフな下書きに近い記事です。</p>
-        </a>
-
-        <a class="post-card" href="post4.html">
-          <span class="post-number">04</span>
-          <h2>桜の木の下には</h2>
-          <p>梶井基次郎の作品をきっかけに、美しさと不安、そして虚構の関係について考えた読書メモです。</p>
-        </a>
-
-        <a class="post-card" href="post5.html">
-          <span class="post-number">05</span>
-          <h2>「翼」が表しているもの</h2>
-          <p>『翼』における象徴の変化を追いながら、若さ、喪失、戦後の重みを整理した読書感想文です。</p>
-        </a>
-
-        <a class="post-card" href="20260521.html">
-          <span class="post-number">06</span>
-          <h2>クッキーと催眠音声の記録</h2>
-          <p>クッキーを食べたあとに催眠音声を聴いたときの、体の震えや感覚の変化を振り返った体験メモです。</p>
-        </a>
-
         <a class="post-card" href="post6.html">
-          <span class="post-number">07</span>
+          <span class="post-number">01</span>
           <h2>個人物価指数サービスのアイデア</h2>
           <p>平均的な物価ではなく、自分の生活を維持するコストがどれだけ上がっているかを可視化する構想です。</p>
-          <span class="post-genre">ひらめき</span>
         </a>
 
         <a class="post-card" href="20260621.html">
-          <span class="post-number">08</span>
+          <span class="post-number">02</span>
           <h2>経済イベント・マクロ因果マップのアイデア</h2>
           <p>経済ニュースや政策イベントから、指標や市場への連鎖的な影響を因果マップとして整理する構想です。</p>
-          <span class="post-genre">ひらめき</span>
         </a>
       </div>
     </section>

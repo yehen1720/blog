@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>経済イベント・マクロ因果マップのアイデア | りょうくんのメモ</title>
+  <style>
+    :root {
+      --bg: #f6efe6;
+      --paper: rgba(255, 252, 247, 0.92);
+      --text: #2f241f;
+      --muted: #6f5f56;
+      --line: rgba(94, 63, 47, 0.14);
+      --accent: #b85c38;
+      --accent-soft: #f0d3bf;
+      --shadow: 0 18px 40px rgba(77, 48, 34, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Yu Gothic", "Hiragino Sans", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(255, 255, 255, 0.72), transparent 30%),
+        linear-gradient(180deg, #f9f3ec 0%, var(--bg) 55%, #efe2d4 100%);
+    }
+
+    .page {
+      width: min(820px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 40px 0 64px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 16px;
+      padding: 0 4px;
+    }
+
+    .home-link,
+    .article-type {
+      color: var(--muted);
+      font-size: 0.92rem;
+      text-decoration: none;
+    }
+
+    .home-link:hover,
+    .article-type:hover {
+      color: var(--accent);
+    }
+
+    .article {
+      padding: 36px;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background: var(--paper);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(8px);
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--accent);
+      font-size: 0.82rem;
+      letter-spacing: 0.16em;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1.15;
+    }
+
+    .lead {
+      margin: 18px 0 0;
+      color: var(--muted);
+      line-height: 1.9;
+      font-size: 1.04rem;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h2 {
+      margin: 40px 0 14px;
+      font-size: 1.28rem;
+      line-height: 1.4;
+    }
+
+    p {
+      margin: 14px 0;
+      line-height: 1.95;
+    }
+
+    ul {
+      margin: 14px 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      margin: 10px 0;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: rgba(255, 253, 249, 0.72);
+      line-height: 1.85;
+    }
+
+    .path {
+      margin: 18px 0;
+      padding: 18px 20px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255, 253, 249, 0.72);
+    }
+
+    .path-title {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .chain {
+      margin: 0;
+      color: #4b3930;
+      line-height: 2;
+    }
+
+    .point {
+      display: block;
+      margin: 22px 0;
+      padding: 18px 20px;
+      border-left: 4px solid var(--accent);
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--accent-soft), rgba(255, 252, 247, 0.96));
+      color: #6d3824;
+      font-weight: 600;
+      line-height: 1.85;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 28px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        width: min(100% - 20px, 820px);
+        padding: 20px 0 40px;
+      }
+
+      .article {
+        padding: 22px;
+        border-radius: 22px;
+      }
+
+      li,
+      .path {
+        padding: 12px 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="topbar">
+      <a class="home-link" href="index.html">← Home</a>
+      <a class="article-type" href="hirameki.html">ひらめき</a>
+    </div>
+    <article class="article">
+      <p class="eyebrow">IDEA NOTE</p>
+      <h1>経済イベント・マクロ因果マップのアイデア</h1>
+      <p class="lead">経済ニュースや政策イベントを入力すると、各種経済指標・市場指標へどのように連鎖して影響するかを一目で見られるツールの構想。</p>
+
+      <p>作りたいものは、経済ニュースや政策イベントを入力すると、それが各種経済指標・市場指標にどう連鎖して影響するかを一目で見られるツール。</p>
+      <p>たとえば「円安」「原油高」「米利下げ」「日銀利上げ」「中国景気悪化」「賃上げ加速」「消費税増税」「地政学リスク」などを入力すると、一次影響・二次影響・副作用・確認すべき統計が因果マップとして表示される。</p>
+      <p>目的は、単純な予測装置を作ることではない。「円安なら日本株高」「原油高なら物価上昇」みたいな一段論法ではなく、現実には同時に複数の経路が走るので、その経路を見える化したい。</p>
+
+      <h2>円安を入力した場合の例</h2>
+      <div class="path">
+        <p class="path-title">内需へのマイナス経路</p>
+        <p class="chain">円安 → 輸入物価上昇 → 企業物価上昇 → 消費者物価上昇 → 実質賃金低下 → 家計消費悪化 → 内需企業にマイナス</p>
+      </div>
+      <div class="path">
+        <p class="path-title">輸出企業へのプラス経路</p>
+        <p class="chain">円安 → 外貨建て売上・利益の円換算額増加 → 輸出企業・海外売上企業の利益上振れ → EPS上昇 → 株価にプラス</p>
+      </div>
+      <div class="path">
+        <p class="path-title">金利経由のマイナス経路</p>
+        <p class="chain">円安 → インフレ圧力 → 日銀利上げ観測 → 長期金利上昇 → PER低下圧力 → 株価にマイナス</p>
+      </div>
+      <p>このように、同じイベントの中にプラス要因とマイナス要因が同時に存在することを表現したい。</p>
+
+      <h2>表示したい指標</h2>
+      <p>為替、輸入物価、企業物価、CPI、コアCPI、実質賃金、家計消費、実質消費支出、小売売上、企業利益率、設備投資、政策金利、長期金利、PER、EPS、株価、国債、住宅ローン、インバウンド、貿易収支、経常収支など。</p>
+
+      <h2>各矢印に持たせたい情報</h2>
+      <ul>
+        <li>上がる方向なのか、下がる方向なのか。</li>
+        <li>影響がすぐ出るのか、遅れて出るのか。</li>
+        <li>条件次第で逆方向にもなり得るのか。</li>
+        <li>誰にとってプラスで、誰にとってマイナスなのか。</li>
+        <li>その影響を確認するには、どの統計を見ればよいのか。</li>
+      </ul>
+
+      <p>たとえば「内需が弱る」と言うだけでは雑なので、その場合は実質賃金、実質消費支出、小売売上、消費者態度指数、数量ベースの販売動向などを見る、というところまで示したい。</p>
+
+      <h2>本質</h2>
+      <div class="point">このツールの本質は、「経済が連鎖して動く地図」を作ること。用語説明ではなく、イベントから指標への因果関係を、仮説として整理するためのマップにする。</div>
+
+      <h2>作り始め方</h2>
+      <p>将来的に作るなら、最初は完璧なシミュレーターではなく、イベントごとのテンプレート型の因果マップから始める。その後、統計データやニュース、企業業績、金利、為替、株価などをつなげて、実際にどの経路が強く出ているかを確認できるようにする。</p>
+
+      <a class="back-link" href="index.html">index.html に戻る</a>
+    </article>
+  </main>
+</body>
+</html>

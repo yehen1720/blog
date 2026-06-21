@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>個人物価指数サービスのアイデア | りょうくんのメモ</title>
+  <style>
+    :root {
+      --bg: #f6efe6;
+      --paper: rgba(255, 252, 247, 0.92);
+      --text: #2f241f;
+      --muted: #6f5f56;
+      --line: rgba(94, 63, 47, 0.14);
+      --accent: #b85c38;
+      --accent-soft: #f0d3bf;
+      --shadow: 0 18px 40px rgba(77, 48, 34, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Yu Gothic", "Hiragino Sans", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(255, 255, 255, 0.72), transparent 30%),
+        linear-gradient(180deg, #f9f3ec 0%, var(--bg) 55%, #efe2d4 100%);
+    }
+
+    .page {
+      width: min(820px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 40px 0 64px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 16px;
+      padding: 0 4px;
+    }
+
+    .home-link,
+    .article-type {
+      color: var(--muted);
+      font-size: 0.92rem;
+      text-decoration: none;
+    }
+
+    .home-link:hover,
+    .article-type:hover {
+      color: var(--accent);
+    }
+
+    .article {
+      padding: 36px;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background: var(--paper);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(8px);
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--accent);
+      font-size: 0.82rem;
+      letter-spacing: 0.16em;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1.15;
+    }
+
+    .lead {
+      margin: 18px 0 0;
+      color: var(--muted);
+      line-height: 1.9;
+      font-size: 1.04rem;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h2 {
+      margin: 40px 0 14px;
+      font-size: 1.28rem;
+      line-height: 1.4;
+    }
+
+    p {
+      margin: 14px 0;
+      line-height: 1.95;
+    }
+
+    ul {
+      margin: 14px 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      margin: 10px 0;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: rgba(255, 253, 249, 0.72);
+      line-height: 1.85;
+    }
+
+    .point {
+      display: block;
+      margin: 22px 0;
+      padding: 18px 20px;
+      border-left: 4px solid var(--accent);
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--accent-soft), rgba(255, 252, 247, 0.96));
+      color: #6d3824;
+      font-weight: 600;
+      line-height: 1.85;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 28px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        width: min(100% - 20px, 820px);
+        padding: 20px 0 40px;
+      }
+
+      .article {
+        padding: 22px;
+        border-radius: 22px;
+      }
+
+      li {
+        padding: 12px 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="topbar">
+      <a class="home-link" href="index.html">← Home</a>
+      <a class="article-type" href="hirameki.html">ひらめき</a>
+    </div>
+    <article class="article">
+      <p class="eyebrow">IDEA NOTE</p>
+      <h1>個人物価指数サービスのアイデア</h1>
+      <p class="lead">平均的な物価ではなく、自分の生活を維持するコストがどれだけ上がっているかを可視化する、個人向けインフレ・ダッシュボードの構想。</p>
+
+      <p>公式の消費者物価指数（CPI）は、平均的な家計の支出構成をもとにした「国民平均の物価」を示す。一方で、実際の生活コストは人によって大きく違う。外食が多い人、車移動が多い人、都心に住む人、高級食材を買う人、子育て費用がある人、サブスクやガジェット支出が多い人では、同じCPI上昇率でも体感するインフレは異なる。</p>
+      <p>そこで、カード明細、銀行口座、電子マネー、EC購入履歴、レシート情報などから、個人ごとの支出バスケットを作り、その人専用の物価指数を算出するサービスを考える。</p>
+      <p>通常の家計簿は「今月いくら使ったか」を見るものだが、このサービスは「去年と同じ生活を続けるために、今いくら必要になっているか」を見る。つまり、支出増加が単なる浪費なのか、同じ生活をしているのに物価が上がった結果なのかを分解できる。</p>
+
+      <h2>主な機能</h2>
+      <ul>
+        <li>公式CPIと自分専用CPIの比較。例：公式CPIは前年比+3.0％、あなたの個人物価指数は+5.2％。</li>
+        <li>カテゴリ別のインフレ寄与度。外食、食料品、ガソリン、駐車場、家賃、通信費など、どの費目が生活コストを押し上げているかを表示する。</li>
+        <li>同じ生活維持コストの算出。例：去年と同じ生活をするには、月あと3.8万円必要。</li>
+        <li>給与・資産運用との比較。給与上昇率が+2％でも、個人物価指数が+5％なら、実質的な生活水準は下がっている。</li>
+        <li>将来シミュレーション。この生活バスケットのインフレ率が続いた場合、5年後・10年後に必要な生活費を推計する。</li>
+        <li>代替提案。生活の満足度を大きく落とさずに、インフレ影響を下げるなら、どのカテゴリを調整すべきかを提案する。</li>
+      </ul>
+
+      <h2>本質</h2>
+      <p>このサービスの本質は、「国民平均の物価」ではなく「自分の生活の値段」を測ること。家計簿、給与交渉、資産運用、老後資金、保険、住宅ローン設計と相性がよい。</p>
+
+      <h2>信頼設計</h2>
+      <p>ただし、購買データは非常にプライバシー性が高いため、普及には信頼設計が重要になる。広告利用しない、ローカル処理や匿名化を行う、カテゴリ単位で保存する、データ削除を簡単にする、といった設計が必要。</p>
+
+      <div class="point">一言で言えば、個人物価指数サービスとは、平均的な物価ではなく「自分の生活を維持するコストがどれだけ上がっているか」を可視化する、個人向けインフレ・ダッシュボードである。</div>
+
+      <a class="back-link" href="index.html">index.html に戻る</a>
+    </article>
+  </main>
+</body>
+</html>
